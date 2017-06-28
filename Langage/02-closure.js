@@ -32,10 +32,10 @@ const monBouton = createButton('Clic moi');
 for (var i=0; i<3; i++) {
   setTimeout(function onTimeout() {
     console.log(i);
-  }, 1000)
+  }, 1000);
 }
 
 for (var i=0; i<3; i++) {
-  setTimeout(logClosure(i), 1000)
+  setTimeout(logClosure(i), 1000);
 }
 

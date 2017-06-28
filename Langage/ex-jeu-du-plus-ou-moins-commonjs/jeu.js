@@ -1,25 +1,5 @@
-// 1 - Utiliser les methods properties
-// http://es6-features.org/#MethodProperties
-const Random = {
-  get() {
-    return Math.random();
-  },
-  getArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-  },
-  getInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-  },
-  getIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
-  },
-};
-
 const readline = require('readline');
+const Random = require('./random');
 
 // 2 - Utiliser le mot clé class
 // http://es6-features.org/#ClassDefinition
@@ -81,8 +61,4 @@ class Jeu {
   }
 }
 
-const jeu = new Jeu({
-  min: 2,
-  max: 4,
-});
-jeu.jouer();
+module.exports = Jeu;

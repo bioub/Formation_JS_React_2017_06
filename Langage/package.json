@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "moment": "^1.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.1.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  }
+}
