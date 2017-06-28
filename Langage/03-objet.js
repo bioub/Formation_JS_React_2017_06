@@ -31,8 +31,10 @@ console.log(contact.hello());
 
 // 5 - Boucler sur les clés (for .. in)
 for (let prop in contact) {
-  console.log(prop);
-  console.log(contact[prop]);
+  if (contact.hasOwnProperty(prop)) {
+    console.log(prop);
+    console.log(contact[prop]);
+  }
 }
 
 // 6 - Si besoin récurrent d'un certain format d'objet : fonction constructeur
@@ -78,3 +80,6 @@ var jean = new Contact('Jean');
 console.log(jean.hello());
 
 console.log(jean.hello === romain.hello); // true
+
+console.log(romain.hasOwnProperty('prenom')); // true
+console.log(romain.hasOwnProperty('hello')); // false

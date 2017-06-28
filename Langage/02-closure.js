@@ -19,8 +19,9 @@ logHello();
 const createButton = function(value) {
   let button = document.createElement('button');
   button.innerHTML = value;
-  button.addEventListener('click', function() {
+  button.addEventListener('click', function(e) {
     console.log(value);
+    e.target.innerHTML = value++;
   });
   return button;
 }

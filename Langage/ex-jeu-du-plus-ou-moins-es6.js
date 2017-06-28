@@ -1,3 +1,5 @@
+// 1 - Utiliser les methods properties
+// http://es6-features.org/#MethodProperties
 const Random = {
   get: function () {
     return Math.random();
@@ -19,8 +21,15 @@ const Random = {
 
 const readline = require('readline');
 
+// 2 - Utiliser le mot clé class
+// http://es6-features.org/#ClassDefinition
 const Jeu = function(options) {
+  // 3 - Utiliser un default param
+  // http://es6-features.org/#DefaultParameterValues
   options = options || {};
+
+  // 4 - Destructurer options en et max avec valeur par défaut
+  // http://es6-features.org/#ObjectAndArrayMatchingDefaultValues
   const min = options.min || 0;
   const max = (options.max === undefined) ? 100 : options.max;
   this._entierAlea = Random.getIntInclusive(min, max);
@@ -35,11 +44,15 @@ const Jeu = function(options) {
 
 Jeu.prototype.jouer = function() {
   if (this._essais.length) {
+    // 5 - Template string
+    // http://es6-features.org/#StringInterpolation
     console.log('Vous avez déjà joué : ' + this._essais.join(' - '));
   }
 
   this._rl.question('Saisir un entier : ', answer => {
 
+    // 6 - utiliser parseInt et isNaN de Number
+    // http://es6-features.org/#StringInterpolation
     const entierSaisi = parseInt(answer);
 
     if (isNaN(entierSaisi)) {
