@@ -23,8 +23,8 @@ export const ContactLayout = (props) => {
             </Col>
             <Col sm={9}>
                 <Switch>
-                    <Route path="/contacts/add" component={ContactAdd} />
-                    <Route path="/contacts/:id" component={ContactShow} />
+                    <Route path={`${props.match.url}/add`} component={ContactAdd} />
+                    <Route path={`${props.match.url}/:id([1-9][0-9]+)`} component={ContactShow} />
                 </Switch>
             </Col>
         </Row>

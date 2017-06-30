@@ -9,7 +9,12 @@ import {
 import {
     BrowserRouter,
     Route,
+    Link
 } from 'react-router-dom';
+
+import {
+    LinkContainer
+} from 'react-router-bootstrap'
 
 import { Home } from './Home';
 import { ContactLayout } from './ContactLayout';
@@ -26,11 +31,13 @@ export class App extends Component {
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">React-Bootstrap</a>
+              <Link to="/">AddressBook</Link>
             </Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <NavItem eventKey={1} href="#">Link</NavItem>
+              <LinkContainer to="/contacts">
+                <NavItem eventKey={1}>Contacts</NavItem>
+              </LinkContainer>
           </Nav>
         </Navbar>
         <Route exact path="/" component={HomeWithContainer}/>

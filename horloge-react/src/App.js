@@ -2,8 +2,9 @@ import React from 'react';
 import { Horloge } from './Horloge';
 import { HelloForm } from './HelloForm';
 import { desactivable } from './desactivable';
+import { logLifeCycle } from './logLifeCycle';
 
-const HorlogeDesactivable = desactivable(Horloge);
+const HorlogeDesactivable = logLifeCycle(desactivable(Horloge));
 const HelloFormDesactivable = desactivable(HelloForm);
 
 export const App = () => <div>
