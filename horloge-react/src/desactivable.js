@@ -35,7 +35,7 @@ export const desactivable = (OriginalComponent) => {
     };
 
     Desactivable.displayName =
-        `desactivable(${OriginalComponent.displayName || OriginalComponent.name})`;
+        `Desactivable(${OriginalComponent.displayName || OriginalComponent.name})`;
 
     return Desactivable;
 

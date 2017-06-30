@@ -25,7 +25,7 @@ export class ContactAdd extends Component {
         });
     }
 
-    render() {
+    render() {npm
         return <div>
             <h2>Contact Add</h2>
             <form onSubmit={this.handleSubmit}>

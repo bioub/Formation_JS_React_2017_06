@@ -39,7 +39,7 @@ export const logLifeCycle = (OriginalComponent) => {
     }
 
     LogLifeCycle.displayName =
-        `logLifeCycle(${OriginalComponent.displayName || OriginalComponent.name})`;
+        `LogLifeCycle(${OriginalComponent.displayName || OriginalComponent.name})`;
 
     return LogLifeCycle;
 
