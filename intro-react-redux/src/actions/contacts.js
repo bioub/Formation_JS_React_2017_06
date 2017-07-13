@@ -4,7 +4,7 @@ export const ADD_CONTACT = 'ADD_CONTACT';
 export const modifyContactPrenom = (prenom, i) => ({
   type: MODIFY_CONTACT_PRENOM,
   prenom,
-  i
+  i,
 });
 
 export const addContact = () => ({
